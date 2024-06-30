@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silki Chakraborty - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="img/Picsart_24-05-12_19-48-52-366.jpg" alt="My Picture">
+            <h1>Silki Chakraborty</h1>
+            <p>A Final year B.Tech Student</p>
+            <div class="icons">
+                <a href="https://www.linkedin.com/in/silki-chakraborty-109372250/" target="_blank"><img src="img/social-media.png" alt="LinkedIn"></a>
+                <a href="https://github.com/silkic" target="_blank"><img src="img/github.png" alt="GitHub"></a>
+                <a href="https://drive.google.com/file/d/1njSPnr-JLfSN7M53UfhbE0dJH_k6Rqvf/view?usp=drivesdk" target="_blank"><img src="img/cv.png" alt="Resume"></a>
+            </div>
+        </div>
+    </header>
+    
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Enthusiastic B.Tech student specializing in Information Technology with a strong foundation in core Java, Python, HTML/CSS, and JavaScript. Proven ability to adapt quickly to new technologies and eager to leverage academic knowledge and hands-on experiences to contribute effectively to dynamic teams. Passionate about software development, problem-solving, and continuous learning. Seeking opportunities to grow professionally and make meaningful contributions in the field of IT.</p>
+        </div>
+    </section>
+    
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <div class="skill">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Communication</li>
+                        <li>Teamwork</li>
+                        <li>Problem-solving</li>
+                        <li>Analytical thinking</li>
+                    </ul>
+                </div>
+                <div class="skill">
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>Core Java</li>
+                        <li>Python (Basics)</li>
+                        <li>HTML5, CSS</li>
+                        <li>JavaScript Basics</li>
+                        <li>SpringBoot (Beginner)</li>
+                        <li>MySQL</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <section id="certifications">
+        <div class="container">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Core Java Fundamentals - Udemy</li>
+                <li>Python Essentials - Cisco Networking Academy</li>
+                <li>Web Development - Internshala</li>
+                <li>IBM SQL - IBM Cognitive Classes</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>MediSphere</h3>
+                <li>Overview : Developed a comprehensive Hospital Management System to streamline hospital operations and improve patient care.</li>
+                <li>System designing and development : Designed and implemented core modules for Doctor information, patient management, appointment scheduling and allocating doctors.</li>
+                <li>User-Interface : Created a user- friendly interface for Doctors and Patients and managed by the Admin.</li>
+                <li>Database Management : Developed and maintained the database schema to ensure efficient data storage and retreival.</li>
+                <p>Technology statck : </p>
+                    <li>Front end - HTML, CSS, JS, React</li>
+                    <li>Backend - Java, JDBC connectivity, Spring Boot , Rest APIs</li>
+                    <li>Database : MySQL</li>
+                </li>
+        <br>
+            </div>
+            <!-- Add more projects as needed -->
+            <h3>Text Adventure Game</h3>
+            <li>Abstract: The game centers around a character called the "Adventurer," which is represented as an object in the game. This object helps in tracking the player's movements and actions within the game world. The adventurer interacts with the game by typing commands consisting of one or two words. </li>
+            <li>Commands include:
+
+                Go: Move to another room Look: Examine the surroundings Take: Pick up an item Drop: Leave an item Use: Utilize an item Exit: Leave the game The game is built using Java, leveraging Java objects and classes, and utilizes arrays and hashmaps for data management.</li>
+
+            </div>
+    </section>
+    <footer>
+        <div class="container">
+            <ul class="contact-icons">
+                <li><h3>Contact</h3></li>
+                <li><img src="img/new.png" alt="Email"> silkic179@gmail.com</li>
+                <li><img src="img/phone.png" alt="Phone"> +91 9361550589</li>
+            </ul>
+        </div>
+        
+    </footer>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </nav>
+    
+</body>
+<script>
+    // Intersection Observer for fade-in sections
+    const sections = document.querySelectorAll('section');
+
+    const options = {
+        root: null,
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+        });
+    }, options);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+</script>
+
+</html>

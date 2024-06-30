@@ -1,0 +1,216 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    box-shadow: #444246;
+    
+}
+
+/* Basic styling */
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.6;
+    background-color: #c7bdbd;
+    color: #6b6767;
+    scroll-behavior:smooth; /* Smooth scrolling */
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    font-size: 20px;
+}
+
+/* Navigation bar styling */
+nav {
+    background-color: #444246;
+    color: #fff;
+    padding: 5px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content:end;
+    list-style-type: none;
+    text-decoration:dashed;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fc85f6; /* Hover color */
+}
+
+header {
+    text-align: center;
+    margin-top: 80px; /* Adjusted for nav bar */
+}
+
+header img {
+    width: 215px;
+    height: 200px; /* Adjusted for a more balanced look */
+    border-radius: 75%;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1); /* Added subtle box shadow */
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0px;
+    color: #333; /* Darkened the header text color */
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #5c5555; /* Slightly lighter color for paragraph text */
+}
+
+.icons {
+    margin-top: 15px;
+}
+
+.icons a {
+    margin-right: 15px; /* Increased spacing between icon links */
+}
+
+.icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Rounded icons */
+    transition: transform 0.3s ease-in-out; /* Added hover effect */
+}
+
+.icons img:hover {
+    transform: scale(1.2); /* Scale up on hover */
+}
+
+section {
+    padding: 25px 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1); /* Added subtle shadow for sections */
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+}
+
+section.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#about {
+    background: linear-gradient(to right, #41194d, #ff89ac); /* Gradient background */
+    color: #fff; /* Light text color for contrast */
+}
+
+#skills {
+    background: linear-gradient(to right, #01580d, #3ed8c3); /* Gradient background */
+    color: #fff; /* Light text color for contrast */
+}
+
+#certifications {
+    background: linear-gradient(to right, #7a1045, #f1c675); /* Gradient background */
+    color: #fff; /* Light text color for contrast */
+}
+
+#projects {
+    background: linear-gradient(to right, #315e61, #e79292); /* Gradient background */
+    color: #fffbfb; /* Dark text color */
+}
+
+h2 {
+    font-size: 2.5rem; /* Increased heading size */
+    margin-bottom: 30px; /* Increased spacing below headings */
+}
+
+.skills-list {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.skill {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.skill h3 {
+    font-size: 1.8rem; /* Larger font size for skill titles */
+    margin-bottom: 15px;
+    color: #fff; /* Light text color */
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 70px;
+}
+
+footer {
+    background-color: #302828;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0px;
+   
+}
+.contact-icons {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0;
+}
+
+.contact-icons li {
+    display:-webkit-flex;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+.contact-icons img {
+    margin-right: 15px;
+    width: 30px; /* Adjust the size as needed */
+    height: 30px; /* Adjust the size as needed */
+}
+
+.contact-icons img:hover {
+    transform: scale(1.2); /* Scale up on hover */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    header img {
+        width: 120px;
+        height: 140px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .icons img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .skills-list {
+        flex-direction: column;
+    }
+
+    .skill {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
